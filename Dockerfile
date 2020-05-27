@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 RUN apt-get update
 RUN apt-get install -y openssh-server vim net-tools tree g++ git cmake autotools-dev pkg-config autoconf 
@@ -12,6 +12,6 @@ RUN apt-get clean &&  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 
 EXPOSE 22
-CMD ["/usr/sbin/sshd" "-D"]
+CMD ["/usr/sbin/sshd","-D"]
 
 
