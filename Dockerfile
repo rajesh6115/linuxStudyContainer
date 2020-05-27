@@ -1,8 +1,8 @@
 FROM ubuntu:16.04
 
 RUN apt-get update
-RUN apt-get install openssh-server vim net-tools tree g++ git cmake autotools-dev pkg-config autoconf -y
-RUN apt-get install libglib2.0-dev
+RUN apt-get install -y openssh-server vim net-tools tree g++ git cmake autotools-dev pkg-config autoconf 
+RUN apt-get install -y libglib2.0-dev
 RUN mkdir /var/run/sshd
 RUN ssh-keygen -A
 RUN echo 'root:root' | chpasswd
